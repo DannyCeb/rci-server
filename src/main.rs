@@ -7,7 +7,7 @@ use rci_server::{
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let subscriber = get_subscriber("zero2prod", "info", std::io::stdout);
+    let subscriber = get_subscriber("rci-server", "info", std::io::stdout);
 
     init_subscriber(subscriber);
     let address = format!("0.0.0.0:{}", 8080);
